@@ -14,5 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    // return view('welcome');
+    Log::channel('my_custom')->info('Test My Custom Log', [ 'user_id' => 1 ]);
 });
